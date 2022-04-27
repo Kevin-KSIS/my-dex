@@ -24,7 +24,8 @@ const mainnetGwei = 21;
 
 function mnemonic() {
   try {
-    return fs.readFileSync("./mnemonic.txt").toString().trim();
+    return process.env.MNEMONIC || "test test test test test test test test test test test junk";
+    // return fs.readFileSync("./mnemonic.txt").toString().trim();
   } catch (e) {
     if (defaultNetwork !== "localhost") {
       console.log(
@@ -253,6 +254,15 @@ module.exports = {
   solidity: {
     compilers: [
       {
+        version: "0.8.0",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
+      },
+      {
         version: "0.8.4",
         settings: {
           optimizer: {
@@ -272,6 +282,15 @@ module.exports = {
       },
       {
         version: "0.5.0",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
+      },
+      {
+        version: "0.5.16",
         settings: {
           optimizer: {
             enabled: true,

@@ -42,7 +42,8 @@ yarn deploy
 
 > Following TraderJoeXYZ.com
 
-# The concepts
+# The concepts  
+
 - *Underlying tokens:* The token is a base token of liquidity token.  
 - *Liquidity provider*: provide the pool with the two tokens that can be exchanged (we'll call them **Token0** and **Token1**). In return, they receive a third token that represents partial ownership of the pool called a *liquidity token.*  
 - *Traders*: send one type of token to the pool and receive the other (for example, send **Token0**
@@ -77,3 +78,7 @@ yarn deploy
 - MASK - new restriction from version 0.8.0  
     - uint256 public constant MASK = type(uint128).max;  
     - [https://docs.soliditylang.org/en/breaking/080-breaking-changes.html#new-restrictions](https://docs.soliditylang.org/en/breaking/080-breaking-changes.html#new-restrictions)  
+
+
+# Trouble
+__1. Multiple versions__
